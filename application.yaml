@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    #url: jdbc:postgresql://oal-euc1-non-prod-dev-aurora.cluster-ctoypsqyumzj.eu-central-1.rds.amazonaws.com:5432/postgres?gssEncMode=disable
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: PUT_YOUR_PASS_WORD
+    hikari:
+      minimum-idle: 0
+      maximum-pool-size: 10
+      connection-timeout: 60000
+      max-lifetime: 90000
+      idle-timeout: 90000
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
